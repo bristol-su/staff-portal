@@ -19,6 +19,12 @@ class PortalController extends Controller
         ]);
     }
 
+    public function ggg(){
+
+        $uc = app('Unioncloud');
+        dd($uc->authenticate());
+    }
+
 
     private function getShortcutsArray() {
 

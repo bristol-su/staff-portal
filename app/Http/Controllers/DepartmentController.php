@@ -43,11 +43,14 @@ class DepartmentController extends Controller
     }
 
     public function showUpdateUsersForm(\App\Department $department) {
-        return view('pages.departments.updateusers', ['department'=>$department]);
+        $users_ids = $department->users()->pluck('users.id')->toArray();
+        $users = \App\User::all()->reject(function($user) use ($users_ids){
+            return in_array($user->id, $users_ids);
+        });
+        return view('pages.departments.updateusers', ['department'=>$department, 'users'=>$users]);
     }
 
     public function updateUsers(\App\Department $department) {
-        //TODO on view, only allow those not in the group to be added
         $department->users()->attach(request()->input('user'));
         return redirect('departments/'.$department->id.'/users');
     }

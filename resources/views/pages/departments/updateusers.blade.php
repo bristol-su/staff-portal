@@ -5,16 +5,18 @@
 
     <fieldset class="scheduler-border">
         <legend class="scheduler-border">Add User</legend>
-            <form method="POST" action="/departments/{{$department->id}}/users/add">
-                {{csrf_field()}}
-                <select name="user">
-                    @foreach(\App\User::orderBy('forename', 'ASC')->get() as $user)
+            @if(count($users) > 0)
+                <form method="POST" action="/departments/{{$department->id}}/users/add">
+                    {{csrf_field()}}
+                    <select name="user">
+                        @foreach($users as $user)
 
-                        <option value="{{$user->id}}">{{$user->forename}} {{$user->surname}} - {{$user->email}}</option>
-                    @endforeach
-                </select>
-                <button type="submit" class="btn btn-success">Add User</button>
-            </form>
+                            <option value="{{$user->id}}">{{$user->forename}} {{$user->surname}} - {{$user->email}}</option>
+                        @endforeach
+                    </select>
+                    <button type="submit" class="btn btn-success">Add User</button>
+                </form>
+            @endif
     </fieldset>
 
     <div class="table-responsive">

@@ -42,7 +42,7 @@ Route::post('/shortcuts/department/{shortcut}/edit', 'ShortcutController@departm
 Route::post('/shortcuts/{shortcut}/delete', 'ShortcutController@delete'); //Delete
 Route::post('/shortcuts/department/{shortcut}/delete', 'ShortcutController@departmentdelete'); //Delete
 
-
+Route::get('/ggg', 'PortalController@ggg');
 
 /* Department Routes */
 //Create
