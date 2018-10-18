@@ -26,6 +26,6 @@ class AddUserToDepartments
      */
     public function handle(UserCreated $event)
     {
-        \App\Department::find(1)->attach($event->user);
+        \App\Department::find(1)->users()->attach($event->user);
     }
 }
