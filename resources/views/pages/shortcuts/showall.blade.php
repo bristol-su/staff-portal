@@ -9,7 +9,7 @@
                     <th>Link Name</th>
                     <th>Link Shortcut</th>
                     <th>Category</th>
-                    <th>Actions</th>
+                    <th style="white-space:nowrap;">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                         <td>
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/{{$shortcut->id}}/view" role="button">View</a>
                             <a name="edit{{$shortcut->id}}" id="edit{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/{{$shortcut->id}}/edit" role="button">Edit</a>
-                            <form method="POST" action="/shortcuts/{{$shortcut->id}}/delete">
+                            <form method="POST" action="/shortcuts/{{$shortcut->id}}/delete" style="display:inline-block;">
                                 {{csrf_field()}}
                                 <input type="submit" name="delete{{$shortcut->id}}" class="btn btn-danger" value="Delete"/>
                             </form>
@@ -56,7 +56,7 @@
                         <td>
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/department/{{$shortcut->id}}/view" role="button">View</a>
                             <a name="edit{{$shortcut->id}}" id="edit{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/department/{{$shortcut->id}}/edit" role="button">Edit</a>
-                            <form method="POST" action="/shortcuts/department/{{$shortcut->id}}/delete">
+                            <form method="POST" action="/shortcuts/department/{{$shortcut->id}}/delete" style="display:inline-block;">
                                 {{csrf_field()}}
                                 <input type="submit" name="delete{{$shortcut->id}}" class="btn btn-danger" value="Delete"/>
                             </form>

@@ -18,7 +18,7 @@
     @if(auth()->check())
     <div class="col-xs-4 toolbar-col">
         <div class="toolbar-content right header-user-menu">
-            <img src="/img/demoprofile.svg" alt="User Image"/>
+            <img src="/img/demoprofile.svg" alt="User Image" class="user-profile-picture"/>
 
             <ul>
                 <li><a href="/users/{{auth()->user()->id}}/view">My Profile</a></li>
