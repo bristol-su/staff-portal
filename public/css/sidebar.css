@@ -9,6 +9,8 @@
 }
 
 #sidebar-wrapper {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2452A1), to(#16B5CA));
+  background-image: linear-gradient(#2452A1, #16B5CA);
   z-index: 1000;
   position: fixed;
   left: 250px;
@@ -16,7 +18,6 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -55,7 +56,9 @@
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: #000000;
+  font-weight: bold;
+  font-size: large;
 }
 
 .sidebar-nav li a:hover {

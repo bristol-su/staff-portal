@@ -13,6 +13,7 @@
         <li class="sidebar-brand">
             <img alt="Bristol SU" src="{{asset('img/sulogo.png')}}" style="width: 70%"/>
         </li>
+          <br/>
         @php $links = array(
           'Login|guest'=>'/login',
           'Register|guest'=>'register',
