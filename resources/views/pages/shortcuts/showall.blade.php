@@ -18,7 +18,7 @@
                         <td scope="row">{{ $shortcut->name }}</td>
                         <td><a href="{{$shortcut->link}}">{{ $shortcut->link }}</a></td>
                         <td>{{ $shortcut->category }}</td>
-                        <td>
+                        <td style="white-space: nowrap;">
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/{{$shortcut->id}}/view" role="button">View</a>
                             <a name="edit{{$shortcut->id}}" id="edit{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/{{$shortcut->id}}/edit" role="button">Edit</a>
                             <form method="POST" action="/shortcuts/{{$shortcut->id}}/delete" style="display:inline-block;">
@@ -53,7 +53,7 @@
                         <td scope="row">{{$shortcut->name}}</td>
                         <td><a href="{{$shortcut->link}}">{{ $shortcut->link }}</a></td>
                         <td>{{$shortcut->category}}</td>
-                        <td>
+                        <td style="white-space: nowrap;">
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/department/{{$shortcut->id}}/view" role="button">View</a>
                             <a name="edit{{$shortcut->id}}" id="edit{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/department/{{$shortcut->id}}/edit" role="button">Edit</a>
                             <form method="POST" action="/shortcuts/department/{{$shortcut->id}}/delete" style="display:inline-block;">
