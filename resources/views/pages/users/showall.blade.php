@@ -5,7 +5,9 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Department Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -13,6 +15,9 @@
                 @foreach($users as $user)
                     <tr>
                         <td scope="row">{{ $user->forename }}</td>
+                        <td>{{ $user->surname }}</td>
+                        <td>{{ $user->email }}</td>
+
                         <td>
                             <a name="view{{$user->id}}" id="view{{$user->id}}" class="btn btn-info" href="/users/{{$user->id}}/view" role="button">View</a>
                             <a name="edit{{$user->id}}" id="edit{{$user->id}}" class="btn btn-info" href="/users/{{$user->id}}/edit" role="button">Edit</a>

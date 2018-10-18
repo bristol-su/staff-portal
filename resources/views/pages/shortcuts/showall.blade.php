@@ -1,8 +1,8 @@
 @extends('layout.master')
 
 @section('content')
-    Your Shortcuts:<br/>
-    <div class="table-responsive">
+    <h2>Your Shortcuts:</h2><br/>
+    <div class="table-responsive table-striped table-condensed">
         <table class="table">
             <thead>
                 <tr>
@@ -16,7 +16,7 @@
                 @foreach($usershortcuts as $shortcut)
                     <tr>
                         <td scope="row">{{ $shortcut->name }}</td>
-                        <td>{{ $shortcut->link }}</td>
+                        <td><a href="{{$shortcut->link}}">{{ $shortcut->link }}</a></td>
                         <td>{{ $shortcut->category }}</td>
                         <td>
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/{{$shortcut->id}}/view" role="button">View</a>
@@ -32,8 +32,8 @@
         </table>
     </div>
 
-    Department Shortcuts:<br/>
-    <div class="table-responsive">
+    <h2>Department Shortcuts:</h2><br/>
+    <div class="table-responsive table-striped table-condensed">
         <table class="table">
             <thead>
             <tr>
@@ -51,7 +51,7 @@
                 @foreach($shortcuts as $shortcut)
                     <tr>
                         <td scope="row">{{$shortcut->name}}</td>
-                        <td>{{$shortcut->link}}</td>
+                        <td><a href="{{$shortcut->link}}">{{ $shortcut->link }}</a></td>
                         <td>{{$shortcut->category}}</td>
                         <td>
                             <a name="view{{$shortcut->id}}" id="view{{$shortcut->id}}" class="btn btn-info" href="/shortcuts/department/{{$shortcut->id}}/view" role="button">View</a>
