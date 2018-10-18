@@ -70,6 +70,7 @@ class AuthController extends Controller
                 'message' => 'Your account hasn\'t been validated yet'
             ]);
         } else {
+            $request->session()->regenerate();
             return redirect('/');
         }
 
