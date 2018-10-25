@@ -52,7 +52,7 @@
         </div>
 
         <div class="department_list" style="display:none;">
-            @foreach(Auth::user()->departments()->get() as $department)
+            @foreach(auth()->user()->departments()->get() as $department)
                 <div class="form-group">
                     <div class="form-check">
                         <label class="form-check-label">
@@ -60,9 +60,9 @@
                             {{$department->name}}
                         </label>
                     </div>
-                    <br/><small id="helpId" class="text-muted">Choose departments to share this shortcut with</small>
                 </div>
             @endforeach
+            <br/><small id="helpId" class="text-muted">Choose departments to share this shortcut with</small>
 
         </div>
 
